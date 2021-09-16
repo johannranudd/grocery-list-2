@@ -12,7 +12,7 @@
   --clr-3: rgb(184, 248, 184);
   --clr-4: rgb(12, 59, 12);
   --clr-5: rgb(243, 155, 155);
-  --clr-6: rgb(243, 155, 155);
+  --clr-6: rgb(180, 24, 24);
 }
 
 body {
@@ -58,8 +58,7 @@ ul {
   width: 100%;
   text-align: center;
   border-radius: 5px;
-  color: var(--clr-4);
-  /* margin: 0 2rem; */
+  transition: 0.3s linear;
 }
 
 .container h1 {
@@ -95,6 +94,7 @@ ul {
 
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  cursor: pointer;
 }
 
 .clear-btn {
@@ -103,6 +103,10 @@ ul {
   left: 50%;
   transform: translateX(-50%);
   display: none;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  color: var(--clr-6);
 }
 
 /* apply with JS */
@@ -111,10 +115,14 @@ ul {
   display: block;
 }
 
-.success {
+.alert-success {
+  display: block;
+  color: var(--clr-4);
   background: var(--clr-3);
 }
 
-.danger {
+.alert-danger {
+  display: block;
+  color: var(--clr-6);
   background: var(--clr-5);
 }
