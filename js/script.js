@@ -18,13 +18,28 @@ function displayItem(e) {
   const id = new Date().getTime();
 
   if (value && !editFlag) {
-    console.log("add item");
+    // console.log("add item");
+
+    // create item
+    const listItem = document.createElement("li");
+    listItem.classList.add("list-item");
+
+    console.log(listItem);
+    // add class
+    // item innerHTML
+    // create attr
+    // set attr value
+    // set artNode to item
+    // get buttons
+    // add eventlistener to btns
+    // append to ul
+    // display alert
+    // add to local host
+    // setBackToDefault
   } else if (value && editFlag) {
-    console.log("edit item");
+    // console.log("edit item");
   } else {
-    console.log("please enter value");
-    // alert.classList.add("display-block");
-    // alert.classList.add("alert-danger");
+    // console.log("please enter value");
     alertFn("danger", "please enter a value");
   }
 }
