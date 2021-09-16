@@ -9,6 +9,10 @@
     Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   --clr-1: rgb(226, 244, 253);
   --clr-2: rgb(164, 222, 252);
+  --clr-3: rgb(184, 248, 184);
+  --clr-4: rgb(12, 59, 12);
+  --clr-5: rgb(243, 155, 155);
+  --clr-6: rgb(243, 155, 155);
 }
 
 body {
@@ -31,11 +35,17 @@ ul {
 }
 
 .container {
-  position: relative;
   background: white;
   width: 100%;
   max-width: 500px;
-  padding: 3rem 2rem;
+  /* padding: 3rem 2rem; */
+}
+
+.wrapper {
+  position: relative;
+  padding: 4rem 0;
+  width: 90%;
+  margin: auto;
 }
 
 .alert {
@@ -43,8 +53,13 @@ ul {
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  height: 2rem;
+  height: 1.5rem;
   display: none;
+  width: 100%;
+  text-align: center;
+  border-radius: 5px;
+  color: var(--clr-4);
+  /* margin: 0 2rem; */
 }
 
 .container h1 {
@@ -55,22 +70,31 @@ ul {
 #form1 {
   display: flex;
   justify-content: center;
-  border-radius: 5px;
-  overflow: hidden;
   margin-bottom: 1.5rem;
 }
 
-#form1 input[type="text"] {
+#grocery-input {
   flex: 1;
   padding: 0.4rem;
   border: none;
   background: var(--clr-1);
+
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  z-index: 1;
+}
+
+#grocery-input:focus {
+  outline-width: 5px;
 }
 
 .submit-btn {
   padding: 0.4rem 1.4rem;
   background: var(--clr-2);
   border: none;
+
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .clear-btn {
@@ -83,14 +107,14 @@ ul {
 
 /* apply with JS */
 
-.display-item {
+.display-block {
   display: block;
 }
 
 .success {
-  background: lightgreen;
+  background: var(--clr-3);
 }
 
 .danger {
-  background: rgb(243, 155, 155);
+  background: var(--clr-5);
 }
