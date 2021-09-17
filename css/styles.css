@@ -10,9 +10,11 @@
   --clr-1: rgb(226, 244, 253);
   --clr-2: rgb(164, 222, 252);
   --clr-3: rgb(184, 248, 184);
-  --clr-4: rgb(12, 59, 12);
+  --clr-4: rgb(9, 70, 9);
+  --clr-4-2: rgb(79, 202, 79);
   --clr-5: rgb(243, 155, 155);
   --clr-6: rgb(180, 24, 24);
+  --clr-6-2: rgb(236, 77, 77);
 }
 
 body {
@@ -54,10 +56,10 @@ ul {
   left: 50%;
   transform: translateX(-50%);
   height: 1.5rem;
-  display: none;
   width: 100%;
   text-align: center;
   border-radius: 5px;
+  opacity: 0;
   transition: 0.3s linear;
 }
 
@@ -109,6 +111,28 @@ ul {
   color: var(--clr-6);
 }
 
+/* list item */
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.6rem;
+}
+
+.btn {
+  background: transparent;
+  border: none;
+  padding: 0 0.3rem;
+  cursor: pointer;
+}
+
+.edit-btn {
+  color: var(--clr-4-2);
+}
+.delete-btn {
+  color: var(--clr-6-2);
+}
+
 /* apply with JS */
 
 .display-block {
@@ -116,13 +140,15 @@ ul {
 }
 
 .alert-success {
-  display: block;
   color: var(--clr-4);
   background: var(--clr-3);
+  opacity: 1;
+  transition: 0.3s linear;
 }
 
 .alert-danger {
-  display: block;
+  opacity: 1;
   color: var(--clr-6);
   background: var(--clr-5);
+  transition: 0.3s linear;
 }
