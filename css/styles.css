@@ -7,8 +7,10 @@
 :root {
   --ff-1: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
     Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  --clr-1: rgb(226, 244, 253);
-  --clr-2: rgb(164, 222, 252);
+  --clr-1: rgb(233, 239, 241);
+  --clr-1-2: rgb(232, 248, 255);
+  --clr-2: rgb(103, 182, 221);
+  --clr-2-2: rgb(157, 175, 185);
   --clr-3: rgb(184, 248, 184);
   --clr-4: rgb(9, 70, 9);
   --clr-4-2: rgb(79, 202, 79);
@@ -19,7 +21,7 @@
 
 body {
   font-family: var(--ff-1);
-  background: var(--clr-1);
+  background: var(--clr-1-2);
 }
 
 ul {
@@ -40,7 +42,8 @@ ul {
   background: white;
   width: 100%;
   max-width: 500px;
-  /* padding: 3rem 2rem; */
+  border-radius: 5px;
+  box-shadow: 0px 5px 25px -5px var(--clr-2-2);
 }
 
 .wrapper {
@@ -117,6 +120,14 @@ ul {
   display: flex;
   justify-content: space-between;
   padding: 0 0.6rem;
+}
+
+.list-item p {
+  max-width: 85%;
+  /* word-wrap: break-word; */
+  overflow: hidden;
+  /* white-space: nowrap; */
+  text-overflow: ellipsis;
 }
 
 .btn {
